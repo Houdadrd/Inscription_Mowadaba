@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Mowadaba.ma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulaire d'inscription</h2>
+        <br>
+        <form id="inscriptionForm" action="inscription.php" method="post">
+            <!-- Nom et Prénom -->
+            <div class="input-field">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>     
+            <div class="input-field">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+               
+            </div>
+
+            <!-- Date de naissance -->
+            <div class="input-field">
+                <label for="dateNaissance">Date de naissance</label>
+                <input type="date" id="dateNaissance" name="dateNaissance" required>
+               
+            </div>
+
+            <!-- Sexe -->
+            <p>
+                <label>
+                    <input class="with-gap" name="sexe" type="radio" value="homme" required/>
+                    <span>Homme</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input class="with-gap" name="sexe" type="radio" value="femme" required/>
+                    <span>Femme</span>
+                </label>
+            </p>
+
+            <!-- Classe -->
+            <div class="input-field">
+                <label for="classe">Classe</label>
+                <select id="classe" name="classe" required>
+                    <option value="" disabled selected>Choisissez votre classe</option>
+                    <option value="SRI1">SRI1</option>
+                    <option value="SRI2">SRI2</option>
+                    <option value="DSI1">DSI1</option>
+                    <option value="DSI2">DSI2</option>
+                </select>
+                
+            </div>
+
+            <!-- Adresse e-mail -->
+            <div class="input-field">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" required>
+               
+            </div>
+
+            <!-- Numéros de téléphone -->
+            <div class="input-field">
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+               
+            </div>
+
+            <!-- Numéros de téléphone des parents -->
+            <div class="input-field">
+                <label for="telephonePere">Numéro de téléphone du père</label>
+                <input type="tel" id="telephonePere" name="telephonePere" pattern="[0-9]{10}" required>
+                
+            </div>
+            <div class="input-field">
+                <label for="telephoneMere">Numéro de téléphone de la mère</label>
+                <input type="tel" id="telephoneMere" name="telephoneMere" pattern="[0-9]{10}" >
+                
+            </div>
+
+            <!-- CIN et Massar -->
+            <div class="input-field">
+                <label for="cin">CIN (Carte d'identité nationale)</label>
+                <input type="text" id="cin" name="cin" required>
+               
+            </div>
+            <div class="input-field">
+                <label for="massar">Identifiant Massar</label>
+                <input type="text" id="massar" name="massar" required>
+                
+            </div>
+
+            <!-- Bouton de soumission -->
+            <button class="btn waves-effect waves-light" type="submit" name="action">S'inscrire
+                <i class="material-icons right"></i>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
