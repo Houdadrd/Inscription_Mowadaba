@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 
-    // Initialiser les modales (si vous en utilisez)
+    // Initialiser les modales
     var modalElems = document.querySelectorAll('.modal');
     var modalInstances = M.Modal.init(modalElems);
 });
